@@ -1,0 +1,791 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+
+
+
+/*font*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&display=swap');
+
+
+@font-face {
+    font-family: "DSAutomobilesOffice-Regular";
+    src: url("../fonts/DSAutomobilesOffice-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+ 
+
+  @font-face {
+    font-family: "DSAutomobilesOffice-ExtraBold";
+    src: url("../fonts/DSAutomobilesOffice-ExtraBold.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "DSAutomobilesOffice-ExtraBoldItalic";
+    src: url("../fonts/DSAutomobilesOffice-ExtraBoldItalic.ttf");
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "DSAutomobilesOffice-BoldItalic";
+    src: url("../fonts/DSAutomobilesOffice-BoldItalic.ttf");
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "DSAutomobilesOffice-Italic";
+    src: url("../fonts/DSAutomobilesOffice-Italic.ttf");
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "DSTitleWebSmall-Regular";
+    src: url("../fonts/DSTitleWebSmall-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "DSTitleWebSmall-Italic";
+    src: url("../fonts/DSTitleWebSmall-Italic.otf");
+    font-weight: normal;
+    font-style: italic;
+  }
+
+
+
+/*main-wrapper*/
+.main-wrapper{
+    width: 100%;
+    display: flex;
+   
+    background: url("../assets/img/slider-one.png");
+    background-position: center center!important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    transition: background-image 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition for both image and filter */
+   
+    flex-direction: column;
+  }
+
+  .main-wrapper:hover {
+    background-image: url('../assets/img/slider-one-light.jpg');
+} 
+
+.main-wrapper h1, .main-wrapper p {
+    position: relative;
+    z-index: 1;
+}
+
+  .small-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    max-width: 1088px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    position:relative;
+    overflow: hidden;
+  }
+
+
+  .content-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/*logo*/
+.logo-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+  }
+  .logo-container .logo {
+    width: 20rem;
+    margin: 1rem 0 1rem;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+
+.logo-container .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.logo-container .logo:hover {
+    transition: 0.3s ease-in-out;
+  }
+
+
+  /*title*/
+  h1 ,h2 {
+    color:#fff;
+  }
+
+  .pre-title {
+    font-family: "Roboto", sans-serif;
+    font-size:clamp(1rem, 2.5vw, 1.6rem);
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+   .main-title {
+    font-size:clamp(30px, 2.5vw, 65px);
+    font-style: italic;
+    font-family: "DStitlewebsmall";
+    margin: 0;
+    letter-spacing: 0;
+    transition: font-size 0.3s;
+    line-height: 51px;
+    font-weight: 400;
+}
+
+h2.date-of-event {
+    font-family: "DSAutomobilesOffice-Italic",sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.sidemove {
+    margin-left: 19rem;
+}
+
+.separator {
+    border: 1px solid #fff;
+    width: 16rem;
+    margin-top: 4rem;
+    text-align: center;
+    justify-content: center;
+    display: inline-flex;
+}
+
+p.sliding-title{
+font-family: "DSAutomobilesOffice-Bold",sans-serif;
+color: #fff;
+font-size: 37px;
+font-weight: 700;
+padding-top: 0.5rem;
+line-height: 2.1rem;
+}
+
+p.description{
+font-family: "DSAutomobilesOffice-Italic",sans-serif;
+color: #fff;
+font-size: 13.34px;
+font-weight: 400;
+padding-top:1rem;
+font-style: italic;
+}
+
+.sliding-text,.mainheading {
+  height: 200px;
+}
+
+/*card*/
+
+.thumbnails .thumb-info{
+    padding: 1vh;
+    width: 37.4rem;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .thumbnails .thumb-info h6 {
+    color:#fff;
+    font-family: "DSAutomobilesOffice-Italic", sans-serif;
+    font-size: clamp(1vh, 2.5vw, 13px);
+    text-align: center;
+  }
+
+  .thumbnails .card-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+    z-index: 1;
+    position: relative;
+   
+    
+  }
+
+  .cursor {
+    cursor: pointer;
+}
+
+  .thumbnails .card-wrapper .card-one{
+   
+    background-size: 100% auto;
+  
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+
+  .thumbnails .card-wrapper .card-two{
+   
+    background-size: 100% auto;
+ 
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+
+  .thumbnails .card-wrapper .card-three {
+
+    background-size: 100% auto;
+ 
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+
+  .thumbnails .card-wrapper .card-four{
+  
+    background-size: 100% auto;
+   
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+
+  .thumbnails .thumb-info h6 {
+    color: #fff;
+    font-family: "DSAutomobilesOffice-Italic", sans-serif;
+    font-size: clamp(1vh, 2.5vw, 11px);
+    text-align: center;
+    font-style: italic;
+}
+
+span.title {
+    font-family: 'Roboto';
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    text-align: left;
+    font-size: 0.8rem;
+    margin-bottom: 11px;
+    padding-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    font-style: italic;
+    border-bottom: 1px solid;
+    width: 80%;
+    font-weight: 600;
+}
+
+img.image-card {
+    filter: brightness(0.1);
+    position: relative;
+}
+
+img.image-card:hover {
+    filter: brightness(1);
+    transition: 0.3s ease-in-out;
+
+}
+
+.icon-card {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 81px;
+    width: 100%;
+    height: 100%;
+    background: url(../assets/img/icon-card.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.btn-cta:hover {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-2px, 0, 0);
+    }
+    40%,
+    60% {
+      transform: translate3d(2px, 0, 0);
+    }
+  }
+
+  .footer {
+    background: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    font-family: "DSAutomobilesOffice-Italic", sans-serif;
+}
+
+span.footer-span {
+    font-weight: 800;
+    font-style: italic;
+}
+
+p.before-text {
+    text-transform: uppercase;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45rem;
+  width: 29px;
+  padding: 3px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 21px;
+  border-radius: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background: white;
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.next {
+  right: 0;
+  border-radius: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.small-container.card-container.mobileDisplay {
+  display: none;
+}
+
+.small-container.card-container{
+  display: block;
+
+
+}
+ /*-----------------------------------------------------------------------------------/
+
+/* Extra small devices (phones, less than 575px) */
+@media (max-width: 575px) { 
+
+.small-container {
+    overflow: hidden!important;
+}
+
+  p.before-text {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+}
+  
+  .icon-card-small{
+    display: none;
+  }
+
+  img.image-card {
+    filter:none;
+    position: relative;
+}
+ 
+.sidemove {
+      margin-left: 0;
+}
+.main-title {
+  font-size: 28px;
+  line-height: 24px;
+}
+
+h2.date-of-event{
+  font-size: 0.9rem; 
+}
+
+.separator{
+  margin-top: 0;
+}
+
+p.sliding-title {
+  font-family: "DSAutomobilesOffice-Bold", sans-serif;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 0.5rem;
+  line-height: 1.2;
+}
+
+.main-wrapper{
+ 
+  height: 100vh;
+
+}
+
+
+.thumbnails .card-wrapper {
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 3vh; */
+  flex-direction: row;
+  z-index: 1;
+  position: relative;
+}
+
+
+.icon-card-small {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 35px;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/img/icon-card.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+span.title-small {
+display: none;
+}
+
+
+
+
+.card-container{
+  display: none;
+}
+
+.small-container.card-container.mobileDisplay {
+  display: block;
+}
+
+.small-container.card-container{
+  display: none;
+}
+
+.thumbnails .thumb-info-small{
+  padding: 1vh;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.thumbnails .thumb-info-small h6 {
+  color:#fff;
+  font-family: "DSAutomobilesOffice-Italic", sans-serif;
+  font-size: clamp(1vh, 2.5vw, 13px);
+  text-align: center;
+}
+
+}
+
+/* Small devices (tablets, less than 768px) */
+@media (max-width: 767px) { 
+  .icon-card{
+    left: 53px;
+  }
+
+  span.title{
+    font-size: 0.6rem;
+  }
+
+  .sidemove {
+    margin-left: 0;
+}
+
+}
+
+/* Medium devices (large tablets or small laptops, less than 1024px) */
+@media (max-width: 1023px) { 
+  .sidemove {
+    margin-left: 0;
+}
+
+
+
+.icon-card{
+  left: 53px;
+}
+
+span.title{
+  font-size: 0.6rem;
+}
+
+.thumbnails .card-wrapper{
+  margin-bottom: 0;
+}
+
+.main-title {
+ 
+  line-height: 30px;
+
+}
+
+}
+
+
+
+/* Extra small devices (phones, less than 640px) */
+@media (max-width: 639px) { 
+
+
+  p.before-text {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+}
+  
+  .icon-card-small{
+    display: none;
+  }
+
+  img.image-card {
+    filter:none;
+    position: relative;
+}
+ 
+.sidemove {
+      margin-left: 0;
+}
+.main-title {
+  font-size: 28px;
+  line-height: 24px;
+}
+
+h2.date-of-event{
+  font-size: 0.9rem; 
+}
+
+.separator{
+  margin-top: 0;
+}
+
+p.sliding-title {
+  font-family: "DSAutomobilesOffice-Bold", sans-serif;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 0.5rem;
+  line-height: 1.2;
+}
+
+.main-wrapper{
+ 
+  height: 100vh;
+
+}
+
+
+.thumbnails .card-wrapper {
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 3vh; */
+  flex-direction: row;
+  z-index: 1;
+  position: relative;
+}
+
+
+.icon-card-small {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 35px;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/img/icon-card.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+span.title-small {
+display: none;
+}
+
+
+
+
+.card-container{
+  display: none;
+}
+
+.small-container.card-container.mobileDisplay {
+  display: block;
+}
+
+.small-container.card-container{
+  display: none;
+}
+
+.thumbnails .thumb-info-small{
+  padding: 1vh;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.thumbnails .thumb-info-small h6 {
+  color:#fff;
+  font-family: "DSAutomobilesOffice-Italic", sans-serif;
+  font-size: clamp(1vh, 2.5vw, 13px);
+  text-align: center;
+}
+
+}
+
+/* Small devices (tablets, less than 768px) */
+@media (max-width: 767px) { 
+  .icon-card{
+    left: 53px;
+  }
+
+  span.title{
+    font-size: 0.6rem;
+  }
+
+  .sidemove {
+    margin-left: 0;
+}
+
+}
+
+/* Medium devices (large tablets or small laptops, less than 1024px) */
+@media (max-width: 1023px) { 
+  .sidemove {
+    margin-left: 0;
+}
+
+
+
+.icon-card{
+  left: 53px;
+}
+
+span.title{
+  font-size: 0.6rem;
+}
+
+.thumbnails .card-wrapper{
+  margin-bottom: 0;
+}
+
+.main-title {
+ 
+  line-height: 30px;
+
+}
+
+}
+
+/* Large devices (desktops, less than 1280px) */
+@media (max-width: 1279px) { 
+  .sidemove {
+    margin-left: 0;
+}
+
+
+
+.icon-card{
+  left: 53px;
+}
+
+span.title{
+  font-size: 0.6rem;
+}
+
+.thumbnails .card-wrapper{
+  margin-bottom: 0;
+}
+
+.main-title {
+ 
+  line-height: 30px;
+
+}
+
+
+}
+
+/* Extra large devices (large desktops, less than 1536px) */
+@media (max-width: 1535px) { 
+  .small-container{
+    overflow: unset;
+  }
+  
+  .icon-card{
+    left: 53px;
+  }
+  
+  span.title{
+    font-size: 0.6rem;
+  }
+  
+  .thumbnails .card-wrapper{
+    margin-bottom: 0;
+  }
+  
+  .main-title {
+   
+    line-height: 30px;
+  
+  }
+}
+
+/* Super large devices (ultra-wide screens) */
+@media (min-width: 1536px) { 
+  /* Your styles here */
+}

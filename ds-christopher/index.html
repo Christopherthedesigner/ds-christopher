@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DS TEST </title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
+        rel="stylesheet">
+        <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+        
+    </head>
+<body>
+
+
+<div class="main-wrapper full-height">
+    <div class="logo-container">
+            <div class="logo">
+            <a href="index.html">
+                <img src="assets/img/logo.png" alt="Logo">
+            </a>
+            </div>
+    </div>
+
+    <div class="small-container mainheading">
+        <div class="content-title">
+            <p class="pre-title">DS BUSINESS DAYS</p>
+            <h1 class="main-title">PARISER ELEGANZ FUR <br><span class="sidemove">GEWERBEKUBDEN</span></h1>
+            <h2 class="date-of-event">VOM 18, APRIL BIS 18, MAI 2024</h2>
+        </div>
+       
+    </div>
+
+
+    <div class="small-container">
+        <div class="sliding-text">
+            <div class="separator"></div>
+            <p class="sliding-title">PERFEKTE PARTNER <br> FUR JEDEN TAG</p>
+            <p class="description">Vom 18. April bis 18. Mai 2024 leasen Gewerbekunden <br>
+                die exklusiven Fahrzeugmodelle von DS Automobiles <br>
+                zu besonders attraktiven Konditionen.</p>
+            
+        </div>
+       
+    </div>
+
+
+    <div class="small-container card-container">
+        <div class="thumbnails">
+            <div class="thumb-info">
+                <h6>HOVER & ENTDECKEN SIE DIE PARISER ELEGANZ FÜR GEWERBEKUNDEN</h6>
+            </div>
+            <div class="card-wrapper">
+                <div id="card-one" class="card-one" onclick="currentSlide(1)">
+                    <img class="image-card" src="assets/img/cardone.png">
+                    <span class="title">CHAT GPT & DS IRIS</span>
+                    <div class="icon-card"></div>
+                </div>
+                <div id="card-two" class="card-two" id="card-two" onclick="currentSlide(2)" >
+                    <img class="image-card" src="assets/img/cardtwo.png">
+                    <span class="title">NAPPALEDER</span>
+                    <div class="icon-card"></div>
+                </div>
+                <div id="card-three" class="card-three" id="card-three" onclick="currentSlide(3)">
+                    <img class="image-card" src="assets/img/cardthree.png">
+                    <span class="title">BRACELET-FINISH</span>
+                    <div class="icon-card"></div>
+                </div>
+                <div id="card-four" class="card-four" id="card-four"onclick="currentSlide(4)" >
+                    <img class="image-card" src="assets/img/cardfour.png">
+                    <span class="title">PERLSTICH</span>
+                    <div class="icon-card"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--mobile -->
+
+    <div class="small-container card-container mobileDisplay">
+        <div class="thumbnails">
+            <div class="thumb-info-small">
+                <h6>HOVER & ENTDECKEN SIE DIE PARISER ELEGANZ FÜR GEWERBEKUNDEN</h6>
+            </div>
+            <div class="card-wrapper">
+                <div id="card-one" class="card-one" onclick="currentSlide(1)">
+                    <img class="image-card" src="assets/img/cardone-small.png">
+                    <span class="title-small">CHAT GPT & DS IRIS</span>
+                    <div class="icon-card-small"></div>
+                </div>
+                <div id="card-two" class="card-two" id="card-two" onclick="currentSlide(2)" >
+                    <img class="image-card" src="assets/img/cardtwo-small.png">
+                    <span class="title-small">NAPPALEDER</span>
+                    <div class="icon-card-small"></div>
+                </div>
+                <div id="card-three" class="card-three" id="card-three" onclick="currentSlide(3)">
+                    <img class="image-card" src="assets/img/cardthree-small.png">
+                    <span class="title-small">BRACELET-FINISH</span>
+                    <div class="icon-card-small"></div>
+                </div>
+                <div id="card-four" class="card-four" id="card-four"onclick="currentSlide(4)" >
+                    <img class="image-card" src="assets/img/cardfour-small.png">
+                    <span class="title-small">PERLSTICH</span>
+                    <div class="icon-card-small"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="small-container">
+        <div class="pulse-button">
+            <div class="btn">
+              <img class="btn-cta" src="assets/img/CTA.png">
+            </div>
+          </div>
+    </div>
+  
+
+    <div class="footer">
+        <i class="fa-solid fa-circle-plus"></i>
+        <p class="before-text"> EntdeckE MEHR<span class="footer-span"> ATTRAKTIVE KONDITIONEN</span></p>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="navigation">
+        <a class="prev" onclick="changeSlide(-1)">❮</a>
+        <a class="next" onclick="changeSlide(1)">❯</a>
+    </div>
+  
+
+<script src="js/script.js"></script>
+</body>
+</html>
